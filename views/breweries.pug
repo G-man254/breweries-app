@@ -1,0 +1,19 @@
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Breweries 
+        link(rel="stylesheet", href="./output.css")
+        script(src="https://kit.fontawesome.com/2b0c1324c3.js" crossorigin="anonymous")
+    body(class="bg-[#141414] text-white m-0") 
+        main 
+            div(class="flex items-center justify-around fixed top-0 w-full px-5 py-2 bg-[#1a2417] h-15")
+                h1(class="font-bolder text-4xl text-[#ABCBA2]") Liquor Store
+                form(action="" class="ml-5")
+                    input(type="search", name="by_city" class="border border-gray-200 rounded-md" placeholder="Search by city") 
+            div(class="mt-20 grid md:grid-cols-3 gap-4")
+                each brewery in data
+                    a(href=`/breweries/${brewery.id}`) 
+                        img(src="/images/DirtyHairy-beer.webp" alt="Dirty Hairy beer" class="hover:opacity-80")
+                        h2(class="text-2xl text-[#ABCBA2] hover:underline")=brewery.name
+                        p(class="text-xl font-bold")=brewery.city

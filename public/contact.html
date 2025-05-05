@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact page</title>
+    <link rel="stylesheet" href="/output.css">
+</head>
+<body>
+    <main>
+        <h1 class="text-2xl text-center text-[#ABCBA2] font-bold mt-4">This is my contact page</h1>
+        <form action="/contact" method="post" class="flex flex-col max-w-md mx-auto mt-5">
+            <label class="">
+                Name:
+                <input type="text" name="name" class="border border-gray-600 rounded-md block w-full">
+            </label>
+
+            <label class="">
+                Email:
+                <input type="email" name="email" class="border border-gray-600 rounded-md block w-full">
+            </label>
+
+            <label>
+                Occupation:
+                <input type="text" name="occupation" class="border border-gray-600 rounded-md block w-full">
+            </label>
+
+            <label>
+                Message:
+                <textarea name="message" class="border border-gray-600 rounded-md block w-full"></textarea>
+            </label>
+            <button class="bg-[#141414] py-3 px-5 w-[100px] mt-5 rounded-md text-[#ABCBA2] flex cursor-pointer">Submit</button>
+        </form>
+    </main>
+</body>
+</html>

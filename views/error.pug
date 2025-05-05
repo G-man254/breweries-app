@@ -1,0 +1,14 @@
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Brewery 
+        link(rel="stylesheet", href="/output.css")
+        script(src="https://kit.fontawesome.com/2b0c1324c3.js" crossorigin="anonymous")
+    body(class="bg-[#141414] text-white li-5") 
+        main(class="text-center my-20 h-[100vh] w-full") 
+            h1(class="text-4xl font-bolder text-[#ABCBA2]") Error!!
+            img(src="/images/error.svg", alt="error photo" class="w-[300px] h-[300px] m-auto") 
+            p(class="mt-8 text-red-600 font-bold text-2xl")=message 
+            p(class="mt-8")
+                a(href="/breweries" class="bg-[#1a2417] px-5 py-2 rounded-md font-600 text-white hover:scale-120") Go back 

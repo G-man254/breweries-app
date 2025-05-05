@@ -1,0 +1,19 @@
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Brewery 
+        link(rel="stylesheet", href="/output.css")
+        script(src="https://kit.fontawesome.com/2b0c1324c3.js" crossorigin="anonymous")
+    body(class="bg-[#141414] text-white li-5") 
+        main 
+            div(class="w-[350px] mx-auto mt-10 mb-10") 
+                img(src="/images/DirtyHairy-beer.webp", alt="Dirty Hair beer" class="w-[350px] h-[300px] rounded-t-md")
+                div(class="bg-[#1a2417] text-center h-[300px] rounded-b-md py-10 px-3") 
+                    h1(class="text-2xl font-bold text-[#ABCBA2]")=data.name
+                    a(href=`${data.website_url}` target=" " class="text-xl text-[#ABCBA2] hover:underline leading-10 hover:text-white")=data.website_url
+                    ul(class="text-xl")
+                        li(class="leading-10 text-[#ABCBA2]")=data.city
+                        li(class="leading-10 text-[#ABCBA2]")=data.street
+                        li(class="leading-10 text-[#ABCBA2]")=data.state_province 
+                        li(class="leading-10 text-[#ABCBA2]")=data.country
