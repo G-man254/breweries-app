@@ -82,9 +82,10 @@ app.post('/contact', (req, res) => {
     let name = body.name;
     let email = body.email;
     let occupation = body.occupation;
+    let message = body.message;
     
 
-    console.log({name, email, occupation});
+    console.log({name, email, occupation, message});
 
     let transporter = nodemailer.createTransport({
         //service: "gmail",
@@ -99,9 +100,9 @@ app.post('/contact', (req, res) => {
 
     transporter.sendMail({
         from: 'denniskarikiu@gmail.com',
-        to: 'dennisgitau83@gmail.com',
+        to: `${email}`,
         subject: 'Test email',
-        text: 'Hello, this is my first email via nodemailer... hooorayyy!!'
+        text: `${message}`
     }, (info, error) => {
         if (error) {
             console.log(error)
